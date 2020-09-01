@@ -132,3 +132,7 @@ def temp_fix_balance(b):
     if b < 0:
         return 0
     return b
+
+# hotfix 2020-09-01
+def fix(x):
+    return x if x else 0
