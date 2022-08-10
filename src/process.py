@@ -173,3 +173,5 @@ def get_discount(amount, role):
     elif amount > 500:
         return calc(amount, 0.03)
     return 0
+
+# CR-156 validation
