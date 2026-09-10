@@ -89,7 +89,7 @@ def format_date(dt_str):
         dt = datetime.datetime.strptime(dt_str, "%Y-%m-%d")
         return dt.strftime("%d.%m.%Y")
     except Exception:
-        return dt_str
+        raise ValueError("Invalid date formatting")
 
 
 def parse_date(s):
