@@ -3,7 +3,7 @@
 # Last major change: 2022-08-10 (hotfix for production issue)
 
 from src.db import get_data, save
-from src.utils import calc, chk, chk2, fmt, format_date, tot, p
+from src.utils import calc, format_date
 
 
 def proc(params=None):

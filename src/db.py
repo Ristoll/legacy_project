@@ -4,19 +4,19 @@
 import json
 import os
 import datetime
-
+from dotenv import load_dotenv
 # global connection (bad practice but works)
 _conn = None
 _cache = {}
 _last_query = None
-DB_PATH = "data/"
 
-# hardcoded credentials (technical debt CR-001 - fix someday)
-DB_HOST = "localhost"
-DB_PORT = 5432
-DB_USER = "admin"
-DB_PASS = "admin123"  # TODO: move to env
 
+load_dotenv()
+DB_PATH = os.getenv("DB_PATH")
+DB_HOST = os.getenv("DB_HOST")
+DB_PORT = os.getenv("DB_PORT")
+DB_PASS = os.getenv("DB_PASS")
+DB_USER = os.getenv("DB_USER")
 
 class DataManager:
     """manages everything data related"""
